@@ -1,0 +1,14 @@
+$font-size: 70px;
+
+.example {
+  h1 {
+    font-size: 10px;
+  }
+}
+
+li {
+  padding: 5px!important;
+}
+
+
+@import "buttons";
