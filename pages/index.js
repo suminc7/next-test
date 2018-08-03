@@ -5,7 +5,7 @@ import '../styles/style.scss'
 
 const Index = (props) => (
     <Layout>
-        <h1>Batman TV Shows 2</h1>
+        <h1>Batman TV Shows 555666</h1>
         <style jsx>{`
           li {
             font-size: 14px;
@@ -17,6 +17,7 @@ const Index = (props) => (
           }
         `}</style>
         <ul>
+
             {props.shows.map(({show}) => (
                 <li key={show.id}>
                     <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
