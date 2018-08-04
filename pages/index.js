@@ -27,7 +27,7 @@ const Index = (props) => (
             ))}
         </ul>
         <button>button</button>
-        <img width={ 100 } src="/static/images/img-about-shirts-01.png" alt="my image" />
+        <img width={ 100 } src={require('../static/images/img-about-shirts-01.png')} alt="my image" />
     </Layout>
 )
 
