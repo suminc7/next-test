@@ -27,7 +27,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - $AWS_ACCOUNT_ID=255775243622
+      - AWS_ACCOUNT_ID=255775243622
       - IMAGE_REPO_NAME=next-test
       - IMAGE_TAG=latest
 #      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
