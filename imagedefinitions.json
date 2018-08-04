@@ -1,0 +1,21 @@
+{
+  "taskDefinition": {
+    "family": "next-test",
+    "containerDefinitions": [
+      {
+        "name": "next-test",
+        "image": "255775243622.dkr.ecr.us-east-1.amazonaws.com/next-test:latest",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ],
+        "memory": 128,
+        "essential": true
+      }
+    ]
+  }
+}
