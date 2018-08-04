@@ -10,10 +10,11 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
-RUN npm run build
 
 ENV NODE_ENV production
 ENV PORT 80
+
+RUN npm run build
 
 EXPOSE 80
 
