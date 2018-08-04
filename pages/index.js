@@ -5,7 +5,7 @@ import '../styles/style.scss'
 
 const Index = (props) => (
     <Layout>
-        <h1>Batman TV Shows 111</h1>
+        <h1>Batman TV Shows 777</h1>
         <style jsx>{`
           li {
             font-size: 14px;
