@@ -3,7 +3,7 @@
     "family": "next-test",
     "containerDefinitions": [
       {
-        "name": "next-test",
+        "name": "DemoContainer",
         "image": "255775243622.dkr.ecr.us-east-1.amazonaws.com/next-test:latest",
         "cpu": 100,
         "portMappings": [
