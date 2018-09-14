@@ -5,7 +5,7 @@ import '../styles/style.scss'
 
 const Index = (props) => (
     <Layout>
-        <h1>Batman TV Shows 777</h1>
+        <h1>Batman TV Shows xxx</h1>
         <style jsx>{`
           li {
             font-size: 14px;
@@ -28,17 +28,20 @@ const Index = (props) => (
         </ul>
         <button>button</button>
         <img width={ 100 } src={require('../static/images/img-about-shirts-01.png')} alt="my image" />
+      <div>{ props.hostname }</div>
     </Layout>
 )
 
-Index.getInitialProps = async function() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-    const data = await res.json()
+Index.getInitialProps = async function(context) {
+  console.log(context.res.hostname)
+    const res1 = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+    const data = await res1.json()
 
     console.log(`Show data fetched. Count: ${data.length}`)
 
     return {
-        shows: data
+        shows: data,
+        hostname: context.res.hostname ? context.res.hostname : 'test'
     }
 }
 

@@ -5,6 +5,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 const port = process.env.PORT || 3000;
+const os = require('os')
 
 app.prepare()
     .then(() => {
@@ -12,12 +13,14 @@ app.prepare()
 
         server.get('/p/:id', (req, res) => {
             const actualPage = '/post'
-            console.log(req.params)
+
             const queryParams = { id: req.params.id }
             app.render(req, res, actualPage, queryParams)
         })
 
         server.get('*', (req, res) => {
+          // console.log('res', res)
+            res.hostname = os.hostname()
             return handle(req, res)
         })
 

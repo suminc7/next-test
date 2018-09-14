@@ -12,10 +12,10 @@ RUN npm install
 COPY . /usr/src/app
 
 ENV NODE_ENV production
-ENV PORT 80
+ENV PORT 3000
 
 RUN npm run build
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD [ "npm", "start" ]

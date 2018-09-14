@@ -34,39 +34,3 @@ module.exports = withPlugins([
         withSass, {}
     ]
 ], nextConfig);
-
-
-
-//
-// const withSass = require('@zeit/next-sass')
-// module.exports = withSass({
-//     webpack(config, options) {
-//
-//         config.module.rules.push(
-//             {
-//                 test: /\.(jpe?g|png)$/,
-//                 use: [
-//                     {
-//                         test: /\.(jpe?g|png|svg|gif)$/,
-//                         use: [
-//                             {
-//                                 loader: "url-loader",
-//                                 options: {
-//                                     limit: 8192,
-//                                     fallback: "file-loader",
-//                                     publicPath: "/_next/",
-//                                     outputPath: "static/images/",
-//                                     name: "[name]-[hash].[ext]"
-//                                 }
-//                             }
-//                         ]
-//                     }
-//                 ]
-//             }
-//         );
-//
-//         return config
-//     }
-// })
-
-
